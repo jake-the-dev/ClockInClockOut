@@ -10,14 +10,15 @@ An application that tracks employee work hours
 
 <details><summary>Plan of Attack</summary>
 
-### Node Packages to install
-Express  
-Express Router  
-MongoDB  
-Bcrypt  
-UUID?  
-Axios over fetch?  
-bodyparser  
+### Entity Relationship Diagram  
+Made in LucidChart
+Not useful for a Document DB, but I like it. 
+![ERD](./frontend/src/assets/ERD.png)
+
+### Prototype: 
+Made in Figma
+![Homepage](./frontend/src/assets/HomePage.png)
+
 </details>
 
 <details><summary>Understanding Folder Structure</summary>
@@ -28,4 +29,8 @@ components - contains all presentational/stateless components
 containers - contains all stateful components   
 pages - contains all routes   
 styles - contains a global CSS config.   
+</details>
+
+<details><summary></summary>
+
 </details>
