@@ -10,14 +10,14 @@ An application that tracks employee work hours
 
 <details><summary>Plan of Attack</summary>
 
+### Prototype: 
+Made in Figma  
+![Homepage](./frontend/src/assets/HomePage.png)
+
 ### Entity Relationship Diagram  
-Made in LucidChart
+Made in LucidChart  
 Not useful for a Document DB, but I like it. 
 ![ERD](./frontend/src/assets/ERD.png)
-
-### Prototype: 
-Made in Figma
-![Homepage](./frontend/src/assets/HomePage.png)
 
 </details>
 
@@ -31,6 +31,6 @@ pages - contains all routes
 styles - contains a global CSS config.   
 </details>
 
-<details><summary></summary>
+<details><summary>Learned along the way</summary>
 
 </details>
