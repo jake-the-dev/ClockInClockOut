@@ -32,5 +32,5 @@ styles - contains a global CSS config.
 </details>
 
 <details><summary>Learned along the way</summary>
-
+Only a lot so far. 
 </details>
