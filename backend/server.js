@@ -4,7 +4,10 @@ const cors = require("cors");
 const app = express();
 require("dotenv").config();
 
+// allow requests from postman / frontend.
 app.use(cors());
+
+// app will req, res data in a JSON format
 app.use(express.json()); // bodyparser is now built into express.
 
 const source = process.env.ATLAS_CONNECTION;
@@ -15,11 +18,13 @@ mongoose.connect(source, {
   useUnifiedTopology: true,
 });
 
-// listener for confirmation of database connection
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("DB connected!");
 });
+
+const userRoutes = require("./controllers/user.controller");
+app.use("/users", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
