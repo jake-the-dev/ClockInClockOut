@@ -27,6 +27,16 @@ router.get("/", async (request, response) => {
   }
 });
 
+/* TODO when deleting by ID, getting that ID will still return 200 with null data.
+{
+    "status": {
+        "code": 200,
+        "message": "User retrieved"
+    },
+    "data": null
+}
+*/
+
 router.get("/:id", async (request, response) => {
   try {
     const foundUser = await User.findById(request.params.id);
