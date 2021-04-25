@@ -1,17 +1,17 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
-require("dotenv").config();
-
-// allow requests from postman / frontend.
-app.use(cors());
 
 // app will req, res data in a JSON format
 app.use(express.json()); // bodyparser is now built into express.
 
-const source = process.env.ATLAS_CONNECTION;
+// allow requests from postman / frontend.
+app.use(cors());
 
+const source = process.env.ATLAS_CONNECTION;
 mongoose.connect(source, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -19,14 +19,16 @@ mongoose.connect(source, {
 });
 
 const connection = mongoose.connection;
-connection.once("open", () => {
-  console.log("DB connected!");
-});
+connection.on("error", (error) => console.error(error));
+connection.once("open", () => console.log("DB connected!"));
 
 const userRoutes = require("./controllers/user.controller");
 app.use("/users", userRoutes);
+app.get("/", (req, res) => {
+  res.send("Homepage");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Successfully served on port: ${PORT}.`);
+  console.log(`Server running on: http://localhost:${PORT}`);
 });

@@ -33,4 +33,8 @@ styles - contains a global CSS config.
 
 <details><summary>Learned along the way</summary>
 Only a lot so far. 
+dotenv files for secure credentials
+MondoDB Atlas and Compass are both the same for viewing db data. 
+router.get('/', (req,res)) vs router.route("/").get((req, res)
+Todo tree from the marketplace
 </details>
