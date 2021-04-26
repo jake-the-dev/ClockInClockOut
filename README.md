@@ -36,4 +36,5 @@ dotenv files for secure credentials
 MondoDB Atlas and Compass are both the same for viewing db data. 
 router.get('/', (req,res)) vs router.route("/").get((req, res)
 Todo tree from the marketplace
+The precision of capitalisation of db fields. 
 </details>

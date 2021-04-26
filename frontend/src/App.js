@@ -1,21 +1,21 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Switch, Route } from "react-router-dom";
+import { Navigation } from "./components/Navigation/Navigation";
+import { LoginForm } from "./components/LoginForm/LoginForm";
+import { Users } from "./components/Users/Users";
+import { Index } from "./components/index";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Switch>
+        <Route exact path="/" component={Index} />
+        <Route path="/users" component={Users} />
+        <Route path="/shifts" component={Users} />
+        <Route path="/login" component={LoginForm} />
+      </Switch>
     </div>
   );
 }
