@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post("/", async (request, response, next) => {
   try {
-    console.log(request.body, " log req.body");
+    console.log("req.body: ", request.body);
     const newShift = await Shift.create(request.body);
     response.status(201).json({
       status: { code: 201, message: `Shift created` },
