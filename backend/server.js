@@ -23,7 +23,9 @@ connection.on("error", (error) => console.error(error));
 connection.once("open", () => console.log("DB connected!"));
 
 const userRoutes = require("./controllers/user.controller");
+const shiftRoutes = require("./controllers/shift.controller");
 app.use("/users", userRoutes);
+app.use("/shifts", shiftRoutes);
 app.get("/", (req, res) => {
   res.send("Homepage");
 });
