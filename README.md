@@ -12,12 +12,12 @@ An application that tracks employee work hours
 
 ### Prototype: 
 Made in Figma  
-![Homepage](./frontend/src/assets/HomePage.png)
+![Homepage](./assets/HomePage.png)
 
 ### Entity Relationship Diagram  
 Made in LucidChart  
 Not useful for a Document DB, but I like it. 
-![ERD](./frontend/src/assets/ERD.png)
+![ERD](./assets/ERD.png)
 
 </details>
 
@@ -27,7 +27,6 @@ __tests__ - contains all test files
 assets - contains all assets   
 components - contains all presentational/stateless components   
 containers - contains all stateful components   
-pages - contains all routes   
 styles - contains a global CSS config.   
 </details>
 
