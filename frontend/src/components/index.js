@@ -1,10 +1,17 @@
 import React, { Component } from "react";
-// import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-// import { MenuItems } from "./MenuItems";
-// import { Clock, List } from "react-bootstrap-icons";
+import "fontsource-roboto";
 
 const Index = () => {
-  return <h1>Index</h1>;
+  return (
+    <div>
+      <div>
+        <p>Body</p>
+      </div>
+      <div>
+        <p>Footer</p>
+      </div>
+    </div>
+  );
 };
 
 export { Index };
