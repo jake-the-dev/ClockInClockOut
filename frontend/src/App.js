@@ -1,7 +1,6 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route } from "react-router-dom";
-import { Navigation } from "./components/Navigation/Navigation";
+import { ButtonAppBar } from "./components/AppBar/AppBar";
 import { LoginForm } from "./components/LoginForm/LoginForm";
 import { Users } from "./components/Users/Users";
 import { Index } from "./components/index";
@@ -9,7 +8,7 @@ import { Index } from "./components/index";
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <ButtonAppBar />
       <Switch>
         <Route exact path="/" component={Index} />
         <Route path="/users" component={Users} />
